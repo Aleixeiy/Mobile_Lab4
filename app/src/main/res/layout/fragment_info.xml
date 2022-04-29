@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#DCDCDC"
+    tools:context=".InfoFragment">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="341dp"
+        android:layout_height="300dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:text="Text"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Категория: "
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Цена: "
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txt_rating"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Рейтинг: "
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txt_description"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Описание: "
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txt_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Комментарий"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/field_style"
+                android:ems="10"
+                android:enabled="false"
+                android:focusable="auto"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                android:singleLine="false"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:boxBackgroundMode="none" />
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#FFFFFF"
+                android:foreground="@android:drawable/ic_menu_edit" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.247" />
+
+    <Button
+        android:id="@+id/btn_add_favorites"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#DCDCDC"
+        android:text="Добавить в избранное"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/web_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
